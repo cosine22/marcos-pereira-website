@@ -1,0 +1,33 @@
+h2 {
+  text-align: center;
+}
+
+button {
+  float: left;
+  margin-left: 1vw;
+}
+
+form {
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 80%;
+}
+
+input {
+  margin-bottom: 2vh;
+  height: 3vh;
+}
+
+select {
+  margin-bottom: 2vh;
+  height: 3vh;
+}
+
+form button {
+  height: 4vh;
+}
+
+form button:hover {
+  background-color: green;
+}

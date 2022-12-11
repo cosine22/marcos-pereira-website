@@ -1,0 +1,118 @@
+#popups {
+  position: absolute;
+  top: 9%;
+  min-width: 98vw;
+  height: 90vh;
+  background: #c0c0c0;
+  justify-content: center;
+  border-top: 1.5px solid white;
+  border-left: 1.5px solid white;
+  border-bottom: 2px solid black;
+  border-right: 1.5px solid black;
+  max-width: fit-content;
+}
+
+#content p {
+  color: black;
+  padding: 1%;
+  text-align: left;
+  font-size: large;
+  margin: 1vw;
+}
+
+#content h2 {
+  font-size: x-large;
+  text-decoration: underline;
+}
+
+#content button {
+  margin: auto;
+  margin-left: 1vw;
+  margin-top: 1vh;
+}
+
+#content-area {
+  /* width: 99%; */
+  margin: auto;
+  top: 10vw;
+  height: 89vh;
+  background-color: white;
+  border-top: 1.5px solid gray;
+  border-left: 1.5px solid gray;
+  border-bottom: 2px solid black;
+  border-right: 1.5px solid black;
+
+  font: 80% Arial, Helvetica, Sans-Serif;
+  color: #555;
+  line-height: 180%;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  word-wrap: break-word;
+}
+
+.Info {
+  grid-area: Info;
+  overflow: hidden;
+}
+
+.Info p {
+  min-width: 30vw;
+}
+.Visuals {
+  grid-area: Visuals;
+  background-color: #c0c0c0;
+  margin-right: 1vw;
+  margin-left: 1vw;
+  padding: 1px;
+  border-top: 1.5px solid gray;
+  border-left: 1.5px solid gray;
+  border-bottom: 2px solid black;
+  border-right: 1.5px solid black;
+  min-width: 10vw;
+}
+
+.Visuals p {
+  margin: auto;
+  padding: 1vw;
+}
+
+.Visuals img {
+  padding-top: 11vh;
+  padding-bottom: 10vh;
+  /* max-height: 70%;
+  max-width: 70%; */
+  margin: auto;
+  scale: 3;
+}
+
+li {
+  font-size: medium;
+  color: black;
+}
+
+#content {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 10% 1fr 1fr 10%;
+  gap: 0px 0px;
+  grid-template-areas:
+    ". . ."
+    "Info Info Visuals"
+    "Info Info Visuals";
+  width: 100%;
+  height: 100%;
+  margin: auto;
+}
+
+/* ol {
+  background-color: #c0c0c0;
+  margin: 1vw;
+  text-align: left;
+} */
+
+h2 {
+  font-weight: normal;
+  margin: 1em 0;
+  font-size: 160%;
+}

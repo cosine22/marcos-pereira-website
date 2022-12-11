@@ -1,0 +1,19 @@
+/* .FavArts {
+} */
+.Fav-Albs {
+  background-color: #c0c0c0;
+  margin: 1vw;
+}
+.Fav-Tracks {
+  background-color: #c0c0c0;
+  margin: 1vw;
+}
+.Top {
+  background-color: #c0c0c0;
+  margin: 1vw;
+}
+
+li {
+  padding-bottom: 1vh;
+  text-align: left;
+}

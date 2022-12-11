@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>contact-me</title>
+    <link href="../css/about.css" rel="stylesheet" type="text/css" />
+    <link href="../css/styles.css" rel="stylesheet" type="text/css" />
+    <link href="../css/contact.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <header>
+      <h3>Marcos Pereira</h3>
+  
+    </header>
+    <div id="popups">
+      <div id="content-area">
+        <div id="formPage">
+          <button onclick="window.location.href='/index.html';">X</button>
+          <h2>Contact Me</h2>
+          <form id="contact-frm">   
+            <input type="name" id="name" placeholder="Enter your full name" required>
+            <input type="email" id="email" placeholder="Enter your email" required> 
+            <input type="phone" id="phone" placeholder="Enter your phone number" required> 
+            <select id="urgency" name="urgency">
+              <option value="low">Enter the urgency:</option>
+              <option value="low">Low</option>
+              <option value="med">Medium</option>
+              <option value="high">HIGH</option>
+            </select required>
+            <input type="message" id="message" placeholder="Enter your message">    <button id="submit" type="submit">Send</button> 
+          </form>
+
+          <script>
+            const contactFrm = document.getElementById('contact-frm');
+            const nameField = document.getElementById('name');
+            const emailField = document.getElementById('email');
+            const phoneField = document.getElementById('phone');
+            const msgField = document.getElementById('message')
+            const submitBtn = document.getElementById('submit');
+            submitBtn.disabled = true;
+
+              
+            emailField.addEventListener('keyup', function (event) {
+        
+              
+              isValidEmail = emailField.checkValidity();
+              isValidName = nameField.checkValidity();
+              isValidPhone = phoneField.checkValidity();
+              
+              
+              if ( isValidEmail ) {
+                submitBtn.disabled = false;
+              } else {
+                submitBtn.disabled = true;
+              }
+              
+            });
+
+            msgField.addEventListener('keyup', function() {
+              let isValidMsg;
+              isValidName = nameField.checkValidity();
+              if(msgField.value.length <= 0) {
+                isValidMsg = false;
+              } else {
+                isValidMsg = true;
+              }
+              if ( isValidMsg ) {
+                submitBtn.disabled = false;
+              } else {
+        
+                submitBtn.disabled = true;
+              }
+
+              if ( isValidName ) {
+                submitBtn.disabled = false;
+              } else {
+                submitBtn.disabled = true;
+              }
+            })
+              
+            submitBtn.addEventListener('click', function (event) {
+              event.preventDefault();
+              if(submitBtn.disabled === false) {
+                submitBtn.remove();
+                contactFrm.innerHTML += `<p style="color:black;">Thank You!</p>`;
+              }
+            });
+            </script>
+    </div>
+  </body>
+</html>
